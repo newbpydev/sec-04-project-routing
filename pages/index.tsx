@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import { getFeaturedEvents } from "../dummy-data";
+import EventList from "../components/events/EventList";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,6 +13,8 @@ export default function Home() {
   return (
     <>
       <h1>The Home Page</h1>
+
+      <EventList items={featuredEvents} />
     </>
   );
 }
